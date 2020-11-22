@@ -8,7 +8,7 @@ Description: >
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
-    Timeout: 20
+    Timeout: 60
 
 Resources:
   SpringbootAwsLambdaFunction:
@@ -17,10 +17,11 @@ Resources:
       CodeUri: springboot-aws-lambda
       Handler: dev.alexandreyoshimatsu.Handler::handleRequest
       Runtime: java8
-      MemorySize: 128
+      MemorySize: 256
       Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
         Variables:
           FUNCTION_NAME: orders
+          MAIN_CLASS: dev.alexandreyoshimatsu.SpringbootApplication
       Events:
         SpringbootAwsLambda:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api

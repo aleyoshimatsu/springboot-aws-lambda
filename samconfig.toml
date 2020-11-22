@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "SpringbootAwsLambda"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1630d6zt0wck5"
+s3_prefix = "SpringbootAwsLambda"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
